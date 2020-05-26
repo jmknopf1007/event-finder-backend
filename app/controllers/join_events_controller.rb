@@ -1,0 +1,2 @@
+class JoinEventsController < ApplicationController
+end
