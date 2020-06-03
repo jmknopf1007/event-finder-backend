@@ -17,7 +17,17 @@ class EventsController < ApplicationController
 
     end 
 
+    def update
+        event = Event.find(params[:id])
+        event.update(event_params)
+        render :json => event
+    end 
 
+    def destroy
+        event = Event.find(params[:id])
+        event.destroy
+        render :json => {status: 'deleted'}
+    end
 
     private
 
