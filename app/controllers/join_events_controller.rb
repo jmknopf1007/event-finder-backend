@@ -13,20 +13,20 @@ class JoinEventsController < ApplicationController
 
     def create 
         join_event = JoinEvent.create(join_event_params)
-        render :json => join_event
+        render json: join_event
 
     end 
 
     def update
         join_event = JoinEvent.find(params[:id])
         join_event.update(join_event_params)
-        render :json => join_event
+        render json: join_event
     end 
 
     def destroy
         join_event = JoinEvent.find(params[:id])
         join_event.destroy
-        render :json => {status: 'deleted'}
+        render json: {status: 'deleted'}
     end 
 
 
